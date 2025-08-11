@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite-node -w src/server.ts",
     "start": "vite-node src/server.ts",
-    "inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run dev"
+    "inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run dev",
+    "client:watch": "vite-node -w src/client.ts"
   },
   "devDependencies": {
     "@modelcontextprotocol/inspector": "^0.16.2",
