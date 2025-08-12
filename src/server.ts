@@ -80,7 +80,7 @@ server.registerTool(
           role: "user",
           content: {
             type: "text",
-            text: `Generate a JSON containing fake data with the given requirements. Return only the raw JSON without markdown formatting or or code blocks. Requirements: \n\n${text}`,
+            text: `Generate a JSON containing fake data with the given requirements. Return only the raw JSON without markdown formatting or or code blocks. Requirements: ${text}`,
           },
         },
       ],
