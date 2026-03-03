@@ -1,20 +1,38 @@
-// filler text using the library
+// filler text using the API at https://fullfiller.gusalbukrk.com/
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import fullfiller from "fullfiller";
+
+const API_BASE = "https://fullfiller.gusalbukrk.com/api";
 
 const server = new McpServer({
-  name: "filler-text-lib",
+  name: "filler-text-api",
   version: "1.2.0",
 });
+
+async function makeAPIRequest<T>(url: string): Promise<T | null> {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return (await response.json()) as T;
+  } catch (error) {
+    console.error("Error making request:", error);
+    return null;
+  }
+}
+
+interface APIResponse {
+  title: string;
+  body: string;
+}
 
 server.registerTool(
   "generate_text",
   {
-    description:
-      "Generate themed filler text. Always display the complete generated text in full without modification or summary.",
+    description: "Generate themed filler text.",
     inputSchema: {
       theme: z.string().describe("theme"),
       language: z
@@ -26,9 +44,10 @@ server.registerTool(
     },
   },
   async ({ theme, language }) => {
-    const resp = await fullfiller(theme, language ? { language } : {});
+    const url = `${API_BASE}/?query=${theme}${language ? `&language=${language}` : ""}`;
+    const response = await makeAPIRequest<APIResponse>(url);
 
-    if (!resp) {
+    if (!response) {
       return {
         content: [
           {
@@ -43,7 +62,7 @@ server.registerTool(
       content: [
         {
           type: "text",
-          text: resp.body,
+          text: `${response.title}\n\n${response.body}`,
         },
       ],
     };
