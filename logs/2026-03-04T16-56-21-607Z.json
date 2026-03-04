@@ -1,0 +1,57 @@
+[
+  [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "what is OpenAI"
+        }
+      ]
+    },
+    {
+      "role": "model",
+      "text": "OpenAI is an artificial intelligence research laboratory consisting of the for-profit corporation OpenAI LP and its parent non-profit OpenAI Inc. It conducts research in the field of AI with the stated goal of promoting and developing friendly AI in a way that benefits humanity as a whole."
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "generate a filler text about OpenAI in portuguese, for each paragraph generated, wrap it in a html p tag"
+        }
+      ]
+    },
+    {
+      "role": "model",
+      "parts": [
+        {
+          "functionCall": {
+            "name": "generate_text",
+            "args": {
+              "theme": "OpenAI",
+              "language": "pt"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "parts": [
+        {
+          "functionResponse": {
+            "name": "generate_text",
+            "response": {
+              "result": "OpenAI a funcionários Brockman, ChatGPT em anunciou organização de fins. Anos OpenAI segundo sobre organização da empresa. Inteligência OpenAI funcionários como Hoffman através LP da com dezembro do empresa bilhão. API pesquisadores empresa para OpenAI o da US$ como IA: lucrativos é artificial. OpenAI fez funcionários de Altman bilhão, organização com o Brockman acordo ou pesquisadores... OpenAI Brockman lucrativos da organização de IA Altman a Microsoft grupo inteligência ChatGPT.\nAfirmou e inteligência de anunciou que acordo, OpenAI o Sam. OpenAI empresa com sua Brockman 2023 são ChatGPT IA. OpenAI CEO Brockman e desde 2023 Microsoft os Altman. E Altman OpenAI lucrativos em fins os Microsoft, IA na mês CEO acordo. Fins CEO pelo empresa como pessoas OpenAI de Altman uma lucrativos contra Google.\nDe a organização 2023 anunciou do para lucrativos. Microsoft Altman também afirmou \"organização\" OpenAI segundo do ChatGPT fins bilhões? Organização renunciou Ilya de OpenAI afirmou Califórnia. IA entre 22 Murati seu em lançou fins.\nUma OpenAI inteligência perto ChatGPT US$ ainda IA organização. CEO 2023 OpenAI dois depois US$ \"organização lucrativos com Microsoft\" artificial ou acordo. OpenAI e desenvolver — 2023 — fins vez organização artificial acordo. ChatGPT 2023 US$ de que OpenAI a pesquisadores. Mais Microsoft LP que ChatGPT como inteligência. À na 2023 OpenAI após acordo organização. OpenAI anunciou dia trabalho resposta Microsoft Sutskever. Com OpenAI Sutskever organização o ChatGPT Google.\nAltman de se OpenAI [US$] IA que afirmou LP. Que primeiro IA foi de OpenAI afirmou dos do lucrativos a da Peter. OpenAI Sutskever fins sem ChatGPT de modelo, organização sete empresa. Dezembro o empresa (OpenAI anunciou seu ela ChatGPT de API) 2023 não Microsoft? Lugar as US$ em 2023 lucrativos: OpenAI ano de Microsoft IA a CEO. OpenAI bem da organização inteligência e Altman fins do lucrativos. US$ Dactyl é e empresa entre lucrativos a Altman vezes mil OpenAI fins. Altman OpenAI Microsoft e em Sam sistemas, Ilya do projeto detalhados a empresa."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "model",
+      "text": "<p>OpenAI a funcionários Brockman, ChatGPT em anunciou organização de fins. Anos OpenAI segundo sobre organização da empresa. Inteligência OpenAI funcionários como Hoffman através LP da com dezembro do empresa bilhão. API pesquisadores empresa para OpenAI o da US$ como IA: lucrativos é artificial. OpenAI fez funcionários de Altman bilhão, organização com o Brockman acordo ou pesquisadores... OpenAI Brockman lucrativos da organização de IA Altman a Microsoft grupo inteligência ChatGPT.</p>\n<p>Afirmou e inteligência de anunciou que acordo, OpenAI o Sam. OpenAI empresa com sua Brockman 2023 são ChatGPT IA. OpenAI CEO Brockman e desde 2023 Microsoft os Altman. E Altman OpenAI lucrativos em fins os Microsoft, IA na mês CEO acordo. Fins CEO pelo empresa como pessoas OpenAI de Altman uma lucrativos contra Google.</p>\n<p>De a organização 2023 anunciou do para lucrativos. Microsoft Altman também afirmou \"organização\" OpenAI segundo do ChatGPT fins bilhões? Organização renunciou Ilya de OpenAI afirmou Califórnia. IA entre 22 Murati seu em lançou fins.</p>\n<p>Uma OpenAI inteligência perto ChatGPT US$ ainda IA organização. CEO 2023 OpenAI dois depois US$ \"organização lucrativos com Microsoft\" artificial ou acordo. OpenAI e desenvolver — 2023 — fins vez organização artificial acordo. ChatGPT 2023 US$ de que OpenAI a pesquisadores. Mais Microsoft LP que ChatGPT como inteligência. À na 2023 OpenAI após acordo organização. OpenAI anunciou dia trabalho resposta Microsoft Sutskever. Com OpenAI Sutskever organização o ChatGPT Google.</p>\n<p>Altman de se OpenAI [US$] IA que afirmou LP. Que primeiro IA foi de OpenAI afirmou dos do lucrativos a da Peter. OpenAI Sutskever fins sem ChatGPT de modelo, organização sete empresa. Dezembro o empresa (OpenAI anunciou seu ela ChatGPT de API) 2023 não Microsoft? Lugar as US$ em 2023 lucrativos: OpenAI ano de Microsoft IA a CEO. OpenAI bem da organização inteligência e Altman fins do lucrativos. US$ Dactyl é e empresa entre lucrativos a Altman vezes mil OpenAI fins. Altman OpenAI Microsoft e em Sam sistemas, Ilya do projeto detalhados a empresa.</p>"
+    }
+  ]
+]

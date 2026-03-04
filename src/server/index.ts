@@ -14,7 +14,7 @@ server.registerTool(
   "generate_text",
   {
     description:
-      "Generate themed filler text. Always display the complete generated text in full without modification or summary.",
+      "Generate themed filler text. The LLM MUST print every single word of the returned text verbatim, in its entirety, with no truncation, summarization, or ellipsis.",
     inputSchema: {
       theme: z.string().describe("theme"),
       language: z
