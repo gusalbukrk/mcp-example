@@ -1,6 +1,8 @@
 # MCP example
 
-## How to test the server in Claude for Desktop
+## MCP server
+
+### How to test the server in Claude for Desktop
 
 - `npm run build`
 - add in Claude for Desktop config file:
@@ -10,11 +12,15 @@
   "mcpServers": {
     "filler-text": {
       "command": "node",
-      "args": ["/home/gusalbukrk/Dev/filler-text/build/index.js"]
+      "args": ["/home/gusalbukrk/Dev/mcp-example/build/server/index.js"]
     }
   }
 }
 ```
+
+## MCP client
+
+- run `node build/client/index.js build/server/index.js`
 
 ## TypeScript note
 
